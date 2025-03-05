@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --primary-color: #2095ae;
+    --white-color: #fff;
+    --light-gray-color: #ddd;
+    --blue-color: #0077cc;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    
+}
+i.menu-btn {
+    display: none;
+    
+    }
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.heading-normal-txt {
+    font-size: 1rem;
+    letter-spacing: 6px;
+    color: var(--primary-color);
+}
+
+.headings {
+    font-size: 3rem;
+    font-family: "Ubuntu";
+    padding-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.headings span {
+    color: var(--primary-color);
+}
+
+.secondary-headings {
+    font-size: 2rem;
+    font-family: "Ubuntu";
+    padding: 1rem;
+}
+
+.lead {
+    font-size: 1.1rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+.primary-btn {
+    width: 50%;
+    outline: none;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+header {
+    padding: 0.8rem 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+    height: 110px; /*we should change this to make the header shorter  */
+    overflow: visible;
+    transition: all 0.3s ease-in-out;
+}
+header.sticky{
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Add shadow */
+}
+
+header.sticky a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust underline position */
+    width: 100%;
+    height: 3px; /* Adjust thickness */
+    background-color: white; /* Light underline */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+header.sticky a:hover::after {
+    transform: scaleX(1); /* Show underline on hover */
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    height: 120px;  /*change this to make the logo appear smaller or larger*/
+    overflow: visible;
+    margin-top: -17px;/*this is for the logo to go a little higher  */
+}
+
+.logo img {
+    width: auto;
+    height: 80px;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    transform: scale(1.3);
+    transform-origin: left center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+nav ul li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: var(--white-color);
+    font-size: 23px;
+    font-weight: 500;
+}
+
+nav ul li::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color); /*to change the underline color*/
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+nav ul li:hover::before {
+    opacity: 1;
+    width: 100%;
+}
+
+.btn{
+    font-size: 1.3rem;
+    color: var(--white-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+main {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.swiper {
+    height: 100vh;
+}
+
+.slide-container {
+    width: 100%;
+}
+
+.slide-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-overLay {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    font-family: "Ubuntu";
+    transform: translate(-50%, -50%);
+}
+
+.img-overLay p {
+    font-size: 1rem;
+    letter-spacing: 8px;
+    color: var(--white-color);
+    animation: animate 3s forwards;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.img-overLay h2 {
+    font-size: 5rem;
+    color: var(--white-color);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    animation: animate 3s forwards;
+    transition: all 0.4s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+}
+
+.overLay {
+    position: relative;
+}
+
+.overLay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.img-overLay h2 span{
+    color: transparent;
+    -webkit-text-stroke: 1px var(--white-color);
+}
+
+
+
+
+
+
+#location-search {
+    transform: translateY(-170%);
+}
+
+.form-wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+    width: 100%;
+}
+
+form input,select{
+    padding: 6px;
+    outline: none;
+    font-size: 1.1rem;
+    color: #000;
+    border: 1px solid var(--light-gray-color);
+    margin: 0 0.4rem;
+    border-radius: 4px;
+}
+
+/* About Part */
+.about-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    margin: 3rem 0;
+}
+
+.about-content-wrapper h2 span {
+    color: var(--primary-color);
+    font-family: "Ubuntu";
+}
+
+.about-content-wrapper ul {
+    list-style: none;
+}
+
+/* Fixed selector to match your HTML structure */
+.about-content-wrapper .icons {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0; /* Add some vertical spacing between list items */
+}
+
+.about-content-wrapper .icons i {
+    background: var(--primary-color);
+    padding: 0.8rem;
+    border-radius: 50%;
+    color: var(--white-color);
+}
+
+.about-content-wrapper .icons p {
+    margin-left: 1rem;
+}
+
+.agency-right-side .img{
+    position: relative;
+}
+
+.agency-right-side .img img{
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    transition: 0.5s ease-in;
+}
+.agency-right-side .img::after{
+content: "";
+position: absolute;
+top: 15px;
+left: 55px;
+bottom: 0;
+right: 0;
+background-color: var(--primary-color);
+width: 70%;
+height: 100%;
+z-index: -2;
+
+}
+.agency-right-side .img img:hover{
+    transform: scale(0.95);
+}
+
+
+/* Choose Places Part */
+#choose-place{
+    padding: 6rem 0;
+}
+
+.choose-wrapper{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+}
+.lg-img{
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 100%;
+    height: 96%;
+}
+.lg-img:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.lg-img:hover {
+transform: scale(1.03);
+}
+
+.img-content{
+    position: absolute;
+    bottom: 20px;
+}
+.img-content h2{
+    padding: 0 2rem;
+    color: var(--white-color);
+}
+.hidden-content{
+    padding: 0.5rem 2rem;
+    color: var(--white-color);
+    transform: translateY(125%);
+    transition: all 0.35s ease-in-out;
+}
+
+.hidden-content i{
+    padding: 0.2rem 0.2rem 0 0;
+}
+
+.lg-img:hover .hidden-content{
+    transform: translateY(0);
+}
+
+.price-label{
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 50px;
+    right: 0;
+   transform: rotate(-90deg);
+}
+
+.row-wise-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 equal columns */
+    gap: 2rem; /* Adds spacing between images */
+    width: 100%; /* Takes full width of container */
+}
+
+
+
+/* Static Counter Part */
+
+#static-counter {
+    padding: 6rem 0;
+    background: url("img/tourist4.webp") no-repeat center top/cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 4;
+}
+
+#static-counter::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.static-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem 0;
+}
+
+.static-icons{
+    color: var(--white-color);
+    cursor: pointer;
+}
+.static-icons i{
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.numbers{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.static-icons i:hover{
+    background: var(--primary-color);
+    transform: translateY(-20%);
+}
+
+
+/* General Styling */
+#top-destination {    
+    padding: 6rem 0;  
+} 
+
+.top-destination-wrapper {     
+    width: 100%;   
+    overflow: hidden; /* Prevents any overflow issues */
+} 
+
+/* SWIPER CONTAINER FIXES */
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-swiper-slide {     
+    position: relative;     
+    cursor: pointer;     
+    transition: all 0.5s ease-in-out;
+    width: 30%; /* Fits 3 images per slide */
+    flex: 0 0 30%; /* Ensures consistent width */
+    margin: 0 1.5%; /* Creates spacing between images */
+} 
+
+.carousel-swiper-slide img {
+    width: 100%;
+    height: 400px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures images cover their space properly */
+    display: block;
+    border-radius: 10px; /* Slightly rounded corners */
+}
+
+/* HOVER EFFECT */
+.carousel-swiper-slide:hover::before {     
+    content: "";     
+    position: absolute;     
+    top: 0;     
+    left: 0;     
+    width: 100%;     
+    height: 100%;     
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 10px;
+}  
+
+.carousel-img-overlay {     
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+} 
+
+.hidden-content-carousel {     
+    padding: 0.5rem 1rem;
+    color: white;     
+    transform: translateY(120%);     
+    transition: all 0.5s ease-in-out;
+    font-size: 0.8rem;
+} 
+
+.carousel-img-overlay i {     
+    padding-right: 0.5rem; 
+}  
+
+.img-content h2 {
+    font-size: 1rem;
+    color: white;
+}
+
+.carousel-swiper-slide:hover .hidden-content-carousel {     
+    transform: translateY(0%); 
+} 
+
+.carousel-swiper-slide:hover {     
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    z-index: 10;
+}
+
+
+
+#costa-victoria {
+    padding: 6rem 0;
+    position: relative;
+}
+
+#costa-victoria video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    max-height: 650px;
+}
+
+.video-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adding a background color overlay to the video */
+.video-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    mix-blend-mode: multiply; /* Blends overlay with video */
+    z-index: 1;
+}
+
+.video-content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    color: var(--white-color);
+ 
+    padding: 2rem;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.video-content h2 {
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    color: var(--white-color);
+    font-family: "Ubuntu";
+    margin-bottom: 1rem;
+}
+
+.video-content span {
+    font-size: 1.2rem;
+    margin: 0 1.5rem;
+}
+
+
+
+/* ===================== Travel Countries ============== Start */
+#travel-countries, .france-content {
+    padding: 6rem 0;
+}
+
+.travel-countries-wrapper, .france-content {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 100%;
+    grid-gap: 2rem;
+}
+
+.countries-content, .france-content {
+    margin-top: 2rem;
+}
+
+.countries-content ul, .france-content ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.countries-content ul li, .france-content ul li {
+    margin: 1.5rem 0.5rem;
+}
+
+.slider-content-wrapper {
+    overflow: hidden;
+}
+
+/* Swiper Slide Styling */
+.travel-countries-wrapper .swiper-slide, .france-content .swiper-slide {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    width: 100%; /* Full width for single slide */
+    overflow: hidden;
+    height: 500px; /* Increased height */
+}
+
+/* Overlay Effect on Hover */
+.travel-countries-wrapper .swiper-slide:hover::before, .france-content .swiper-slide:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+/* Image Styling */
+.travel-countries-wrapper .swiper-slide img, .france-content .swiper-slide img {
+    width: 100%;
+    height: 100%; /* Match slide height */
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Zoom Effect on Hover */
+.travel-countries-wrapper .swiper-slide:hover img, .france-content .swiper-slide:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Content Styling */
+.travel-countries-wrapper .carousel-img-overlay, .france-content .carousel-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Hidden Content Animation */
+.travel-countries-wrapper .hidden-content-carousel, .france-content .hidden-content-carousel {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Reveal Hidden Content on Hover */
+.travel-countries-wrapper .swiper-slide:hover .hidden-content-carousel, .france-content .swiper-slide:hover .hidden-content-carousel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Location and Title Styling on Hover */
+.travel-countries-wrapper .carousel-img-overlay h2, .france-content .carousel-img-overlay h2 {
+    color: white;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.travel-countries-wrapper .swiper-slide:hover .carousel-img-overlay h2, .france-content .swiper-slide:hover .carousel-img-overlay h2 {
+    transform: translateY(-10px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .travel-countries-wrapper, .france-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .travel-countries-wrapper .swiper-slide, .france-content .swiper-slide {
+        height: 350px;
+    }
+}
+/* ===================== Travel Countries ============== Close */

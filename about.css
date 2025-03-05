@@ -1,0 +1,34 @@
+/* About Us Section Styling */
+.about-us-section {
+    position: relative;
+    height: 300px; /* Set the height of the section */
+    background: url('img/tourist1.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Ensures the image covers the section */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Create the overlay */
+.about-us-section::before {
+    content: ''; /* No text, just the overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+ 
+}
+
+/* Style for the text */
+.about-us-content h1 {
+    font-size: 3rem; /* Make the text large */
+    font-family: 'Poppins', sans-serif; /* Adjust font family */
+    font-weight: 600; /* Adjust font weight */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better readability */
+    
+    color: white; /* Ensure text color is white or another contrasting color */
+}

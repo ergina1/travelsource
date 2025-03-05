@@ -1,0 +1,335 @@
+/* ✅ General Styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ✅ Base Typography */
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* ✅ Responsive Navigation Styles */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .swiper {
+        height: 90vh;
+    }
+
+    .img-overLay p {
+        letter-spacing: 6px;
+    }
+
+    .img-overLay h2 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 900px) {
+    /* Show menu button */
+    .menu-btn {
+        display: block !important;
+        cursor: pointer;
+        color: white;
+    }
+
+    .btn {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        color: white;
+    }
+
+    /* Improved navigation menu */
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        width: 80%;
+        max-width: 270px;
+        height: 100vh;
+        background: var(--primary-color);
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        padding: 1rem 2rem 2rem;
+        transition: transform 0.5s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* Make menu items more tappable */
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px;
+        margin: 5px 0;
+        font-size: 1.3rem;
+        text-align: left;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+        width: 100%;
+    }
+
+    /* Improved close button */
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+    }
+
+    /* Active state for the menu */
+    nav ul.display {
+        
+        transform: translateX(0);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Make the logo smaller on mobile */
+    .logo {
+        height: 80px;
+        margin-top: -10px;
+    }
+
+    .logo img {
+        height: 50px;
+        transform: scale(1.1);
+    }
+
+    /* Remove header shadow/background on mobile */
+    header {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 80px;
+    }
+
+    .swiper {
+        height: 70vh;
+    }
+
+    .img-overLay p {
+        letter-spacing: 4px;
+    }
+
+    .img-overLay h2 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+
+    #location-search {
+        transform: translateY(0%);
+        margin: 2rem 0;
+        gap: 1rem;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* ✅ Responsive About Section */
+@media (max-width: 900px) {
+    .about-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .agency-right-side .img img {
+        width: 95%;
+    }
+
+    .agency-right-side .img::after {
+        top: 10px;
+        left: 8px;
+        bottom: 0;
+        right: 0;
+        width: 90%;
+    }
+}
+
+/* ✅ Responsive Grid Layouts */
+@media (max-width: 1200px) {
+    .static-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .choose-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .row-wise-img {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .img-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .static-icons i {
+        font-size: 2.5rem;
+        padding: 1.5rem;
+    }
+
+    .numbers {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .row-wise-img {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .static-wrapper {
+        grid-gap: 1.5rem;
+    }
+
+    .static-icons i {
+        font-size: 2rem;
+        padding: 1.2rem;
+    }
+
+    .hidden-content {
+        padding: 0.5rem 1rem;
+    }
+
+    #choose-place,
+    #static-counter {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .static-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .img-content h2 {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .hidden-content {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .static-icons i {
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+
+    .numbers {
+        font-size: 1.8rem;
+    }
+
+    .price-label {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ✅ Responsive Carousel */
+@media (max-width: 576px) {
+    .carousel-swiper-slide {
+        width: 100%;
+        flex: 0 0 100%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .carousel-swiper-slide {
+        width: 45%;
+        flex: 0 0 45%;
+        margin: 0 2.5%;
+    }
+}
+
+@media (min-width: 993px) {
+    .carousel-swiper-slide {
+        width: 30%;
+        flex: 0 0 30%;
+        margin: 0 1.5%;
+    }
+}
+
+/* Media Queries for the video */
+@media (max-width: 768px) {
+    .video-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .video-content h2 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .video-content span {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-content {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .video-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .video-content span {
+        font-size: 0.9rem;
+    }
+}

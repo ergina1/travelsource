@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Travel Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="destination.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!--header start-->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="img/logowhite.png" alt="Logo">
+                </div>
+                <ul>
+                    <div class="btn">
+                        <i class="fas fa-times close-btn"></i>
+                    </div>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="destination.html" class="active">Destination</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="fas fa-bars menu-btn"></i>
+            </nav>
+        </div>
+    </header>
+
+    <!-- destination Section with Background Image -->
+    <section id="destination" class="destination-section">
+        <div class="container">
+            <div class="destination-content">
+                <h1>Our Destinations</h1>
+                <p>Explore the world's most beautiful and exciting places with us</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="featured-destinations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Destinations</h2>
+                <p>Our most popular and sought-after travel destinations</p>
+            </div>
+            <div class="swiper featured-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="destination-card">
+                            <div class="destination-img1">
+                                <img src="img/santorini1.avif" alt="Santorini">
+                                <div class="destination-tag">Europe</div>
+                            </div>
+                            <div class="destination-info">
+                                <h3>Santorini, Greece</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(4.5)</span>
+                                </div>
+                                <p>Famous for its stunning white buildings, blue domes, and breathtaking sunsets over the Aegean Sea.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="destination-card">
+                            <div class="destination-img1">
+                                <img src="img/bali2.jpg" alt="Bali">
+                                <div class="destination-tag">Asia</div>
+                            </div>
+                            <div class="destination-info">
+                                <h3>Bali, Indonesia</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(4.8)</span>
+                                </div>
+                                <p>A tropical paradise known for its beautiful beaches, lush rice terraces, and vibrant cultural scene.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="destination-card">
+                            <div class="destination-img1">
+                                <img src="img/machu1.jpg" alt="Machu Picchu">
+                                <div class="destination-tag">South America</div>
+                            </div>
+                            <div class="destination-info">
+                                <h3>Machu Picchu, Peru</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(4.9)</span>
+                                </div>
+                                <p>An ancient Incan citadel set high in the Andes Mountains, offering spectacular views and rich history.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Destinations -->
+    <section class="all-destinations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore All Destinations</h2>
+                <p>Discover the perfect destination for your next adventure</p>
+            </div>
+            <div class="destinations-grid" id="destinations-container">
+                <!-- Destination cards will be populated here via JavaScript -->
+            </div>
+            <div class="load-more">
+                <button id="load-more-btn" class="btn-load-more">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Destinations -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Our Destinations</h2>
+                <p>We offer the best travel experiences tailored to your needs</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Handpicked Locations</h3>
+                    <p>We carefully select each destination to ensure you experience the best places in the world.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Local Experiences</h3>
+                    <p>Connect with local cultures and people for authentic travel experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe Travel</h3>
+                    <p>Your safety is our priority with vetted accommodations and guided tours.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Best Value</h3>
+                    <p>Get the most out of your budget with our competitive pricing and exclusive deals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= Footer ============ Start-->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="ft-content">
+                    <div class="icon">
+                        <i class="fa fa-phone-volume"></i>
+                    </div>
+                    <div class="content">
+                        <p class="lead">Call us</p>
+                        <p>+355 98-1234-567</p>
+                    </div>
+                </div>
+                
+                <div class="ft-content">
+                    <div class="icon">
+                        <i class="fa fa-envelope-open"></i>
+                    </div>
+                    <div class="content">
+                        <p class="lead">Write to us</p>
+                        <p>admin@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="ft-content">
+                    <div class="icon">
+                        <i class="fa fa-map-location"></i>
+                    </div>
+                    <div class="content">
+                        <p class="lead">Address</p>
+                        <p>Rruga Muhamet Deliu, Tirane</p>
+                    </div>
+                </div>
+            </div><!-- Closing tag for footer-content -->
+            
+            <!-- footer content 2nd section -->
+            <div class="footer-wrapper">
+                <div class="about">
+                    <div class="img-logo">
+                        <img src="img/logowhite.png" alt="Company Logo" />
+                    </div>
+                    <p class="lead">
+                        Explore the world with us! We offer personalized travel experiences, 
+                        breathtaking destinations, and unforgettable adventures tailored just for you. 
+                        Discover new cultures, relax in paradise, and create memories that last a lifetime.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Our Tours</a></li>
+                        <li><a href="destination.html">Destinations</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="subscribe">
+                    <h2>Subscribe</h2>
+                    <p class="lead">
+                        Sign up for our monthly blog letter to stay informed about our travels and tours
+                    </p>
+                    <form action="#">
+                        <input type="text" placeholder="Email Address" />
+                        <button type="button" class="button">Send</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer">
+                <p>&copy; 2025 Ergina Gjikola. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ========= Footer ============ Close-->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="swiper.js"></script>
+    <script src="destinations.js"></script>
+</body>
+
+</html>

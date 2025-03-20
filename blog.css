@@ -1,0 +1,347 @@
+/* Blog Hero Section Styling */
+.blog-hero-section {
+    position: relative;
+    height: 400px;
+    background: url('img/travel4.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Create the overlay */
+.blog-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure content is above the overlay */
+.blog-hero-content {
+    position: relative; /* Brings it above the overlay */
+    z-index: 5;
+}
+
+/* Style for the text */
+.blog-hero-content h1 {
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Blog Section */
+#blog {
+    padding: 80px 0;
+}
+
+.blog-intro-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.blog-intro-left {
+    flex: 1;
+    padding-right: 0;
+}
+
+/* Hide search form and comment counts */
+.blog-intro-right,
+.blog-meta span:nth-child(2) {
+    display: none;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blog-img {
+    position: relative;
+    height: 220px;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-date {
+    position: absolute;
+    left: 20px;
+    bottom: -20px;
+    background: #0077b6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1.2;
+    z-index: 1;
+}
+
+.blog-date span {
+    display: block;
+}
+
+.blog-date span:first-child {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.blog-content {
+    padding: 30px 20px 20px;
+}
+
+.blog-category {
+    margin-bottom: 10px;
+}
+
+.blog-category span {
+    background: #f2f2f2;
+    color: #0077b6;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.blog-content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.blog-card:hover .blog-content h3 {
+    color: #0077b6;
+}
+
+.blog-content p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.blog-meta span i {
+    margin-right: 5px;
+}
+
+.read-more {
+    display: inline-block;
+    color: #0077b6;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.read-more i {
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.read-more:hover {
+    color: #00496e;
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Pagination */
+.blog-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.blog-pagination ul {
+    display: flex;
+    list-style: none;
+}
+
+.blog-pagination ul li {
+    margin: 0 5px;
+}
+
+.blog-pagination ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: #666;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.blog-pagination ul li a.active,
+.blog-pagination ul li a:hover {
+    background: #0077b6;
+    color: white;
+}
+
+/* Full Article Styling */
+.full-article {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 50px;
+    overflow-y: auto;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    display: none;
+}
+
+.full-article.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.article-category {
+    margin-bottom: 15px;
+}
+
+.article-category span {
+    background: #f2f2f2;
+    color: #0077b6;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.article-header h2 {
+    font-size: 32px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.article-body {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.article-body p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #444;
+}
+
+.close-article {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s;
+}
+
+.close-article:hover {
+    background: #00496e;
+}
+
+/* Prevent body scrolling when article is open */
+body.article-open {
+    overflow: hidden;
+}
+
+/* Hide all paragraphs except the first one
+.blog-content p:not(:first-child),
+.blog-hidden-content {
+    display: none;
+} */
+
+
+/* Responsive */
+@media (max-width: 991px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-intro-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .blog-intro-left {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .full-article {
+        padding: 30px 20px;
+    }
+    
+    .article-header h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-hero-content h1 {
+        font-size: 3rem;
+    }
+}

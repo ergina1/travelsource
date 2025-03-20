@@ -1,0 +1,339 @@
+/* Contact Us Section Styling */
+.contact-us-section {
+    position: relative;
+    height: 400px;
+    background: url('img/travel2.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Create the overlay */
+.contact-us-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure content is above the overlay */
+.contact-us-content {
+    position: relative; /* Brings it above the overlay */
+    z-index: 5;
+}
+
+/* Style for the text */
+.contact-us-content h1 {
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.contact-us-content p {
+    font-size: 1.2rem;
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Rest of contact page styling */
+.contact-us {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-us .row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-col {
+    flex-basis: 48%;
+    
+}
+
+/* Style contact information */
+.contact-col div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.contact-col div i {
+    font-size: 28px;
+    color: rgb(24, 51, 98);
+    margin-right: 20px;
+    padding-top: 5px;
+}
+
+.contact-col div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-col div .p1 {
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: #777;
+}
+
+/* Style contact form */
+.contact-col form {
+    background: #fff;
+    padding: 40px;
+   
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-col form input, 
+.contact-col form textarea,
+.contact-col form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.contact-col form input {
+    height: 50px; /* Fixed height for inputs */
+}
+
+.contact-col form select {
+    height: 50px; /* Fixed height for select */
+    appearance: none; /* Removes browser default styling */
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.contact-col form input:focus,
+.contact-col form textarea:focus,
+.contact-col form select:focus {
+    border-color: var(--blue-color, #2196F3);
+    box-shadow: 0 0 10px rgba(107, 147, 255, 0.2);
+}
+
+.contact-col form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Style for checkbox container */
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+}
+
+.contact-col form button {
+    padding: 12px 30px;
+    background: var(--primary-color, #2196F3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    height: 50px;
+}
+
+.contact-col form button:hover {
+    background: #106881;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+/* Keep the right column structure while maintaining responsive layout */
+@media (max-width: 768px) {
+    .contact-us .row {
+        flex-direction: column;
+    }
+    
+    .contact-col {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+}
+
+/* Map styling */
+.location {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.location iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    filter: grayscale(20%);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .contact-us-section {
+        height: 300px;
+    }
+    
+    .contact-us-content h1 {
+        font-size: 3rem;
+    }
+    
+    .contact-us .row {
+        flex-direction: column;
+    }
+    
+    .contact-col {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-us-section {
+        height: 250px;
+    }
+    
+    .contact-us-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Additional Contact Methods Section CSS */
+.additional-contact {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.additional-contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    position: relative;
+}
+
+.additional-contact h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #2196F3;
+    margin: 15px auto 0;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-option {
+    flex: 1 1 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contact-option i {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.contact-option .fa-whatsapp {
+    color: #25D366;
+}
+
+.contact-option .fa-viber {
+    color: #7360F2;
+}
+
+.contact-option .fa-skype {
+    color: #00AFF0;
+}
+
+.contact-option h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-option p {
+    color: #666;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .contact-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-option {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+    
+    .additional-contact {
+        padding: 40px 20px;
+    }
+    
+    .additional-contact h2 {
+        font-size: 28px;
+    }
+}

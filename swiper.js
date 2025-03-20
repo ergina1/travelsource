@@ -74,3 +74,30 @@ const swiper3 = new Swiper('.swiper3', {
         },
     },
 });
+
+const swiper4 = new Swiper('.swiper4', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    slidesPerGroup: 1,
+    loop: true,
+    centeredSlides: true,
+    grabCursor: true,
+    loopFillGroupWithBlank: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    speed: 400,
+    navigation: {
+        nextEl: '.swiper4-button-next',
+        prevEl: '.swiper4-button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 1,
+        },
+    },
+});

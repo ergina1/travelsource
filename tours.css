@@ -1,8 +1,8 @@
-/* About Us Section Styling */
-.about-us-section {
+/* Tours Section Styling */
+.tours-section {
     position: relative;
     height: 400px;
-    background: url('img/tourist1.jpg') no-repeat center center;
+    background: url('img/airplane.webp') no-repeat center center;
     background-size: cover;
     color: white;
     display: flex;
@@ -12,7 +12,7 @@
 }
 
 /* Create the overlay */
-.about-us-section::before {
+.tours-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -23,13 +23,13 @@
 }
 
 /* Ensure content is above the overlay */
-.about-us-content {
+.tours-content {
     position: relative; /* Brings it above the overlay */
     z-index: 5;
 }
 
 /* Style for the text */
-.about-us-content h1 {
+.tours-content h1 {
     font-size: 4rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;

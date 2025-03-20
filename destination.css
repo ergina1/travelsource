@@ -1,0 +1,288 @@
+/* Existing destination section styling */
+.destination-section {
+    position: relative;
+    height: 400px;
+    background: url('img/travel1.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Create the overlay */
+.destination-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure content is above the overlay */
+.destination-content {
+    position: relative; /* Brings it above the overlay */
+    z-index: 5;
+}
+
+/* Style for the text */
+.destination-content h1 {
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.destination-content p {
+    font-size: 1.2rem;
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #1e3d59; /* Darker sea blue */
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background-color: #3a9ad9; /* Medium sea blue */
+    margin: 0.5rem auto 0;
+}
+
+.section-title p {
+    font-family: 'Ubuntu', sans-serif;
+    color: #1e3d59; /* Darker sea blue */
+    font-size: 1.1rem;
+}
+
+/* Featured Destinations */
+.featured-destinations {
+    padding: 5rem 0;
+    background-color: #f5f7fa; /* Light blue-gray */
+}
+
+.destination-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.destination-img1 {
+    position: relative;
+    height: 650px;
+}
+.destination-img {
+    position: relative;
+    height: 250px;
+}
+
+.destination-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destination-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color:var(--primary-color); /* Medium sea blue */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.destination-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #1e3d59; /* Darker sea blue */
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    margin-bottom: 1rem;
+    color: #ffc107; /* Keep golden stars */
+}
+
+.rating span {
+    color: #666;
+    margin-left: 0.5rem;
+}
+
+.destination-info p {
+    font-family: 'Ubuntu', sans-serif;
+    color: #666;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+/* Swiper Customization */
+.featured-swiper {
+    padding-bottom: 3rem;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #3a9ad9; /* Medium sea blue */
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #3a9ad9; /* Medium sea blue */
+}
+
+/* All Destinations */
+.all-destinations {
+    padding: 5rem 0;
+    background-color: #f5f7fa; /* Light blue-gray */
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.load-more {
+    text-align: center;
+}
+
+.btn-load-more {
+    background-color: transparent;
+    border: 2px solid #3a9ad9; /* Medium sea blue */
+    color: #3a9ad9; /* Medium sea blue */
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-load-more:hover {
+    background-color: var(--primary-color); 
+    color: white;
+}
+
+/* Why Choose Section */
+.why-choose {
+    padding: 5rem 0;
+    background-color: #e8f1f8; /* Very light blue */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon i {
+    font-size: 3rem;
+    color: var(--primary-color); /* Medium sea blue */
+}
+
+.feature-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #1e3d59; /* Darker sea blue */
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-family: 'Ubuntu', sans-serif;
+    color: #666;
+}
+
+/* Active nav link - make all links white
+nav ul li a {
+    color: white;
+}
+
+nav ul li a.active {
+    color: white;
+} */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .destination-content h1 {
+        font-size: 3rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .destination-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+}

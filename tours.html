@@ -1,173 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Agency</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tours.css">
     <link rel="stylesheet" href="responsive.css">
-  
+</head>
 
-
-
-
-
-
-    </head>
-    <body>
-<!--header start-->
-<header>
-    <div class="container">
-    <nav>
-        <div class="logo">
-            <img src="img/logowhite.png" alt="Logo">
-        </div>
-        <ul>
-            <div class="btn">
-                <i class="fas fa-times close-btn"></i>
-                
-            </div> 
-            
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="tours.html">Tours</a></li>
-            <li><a href="destination.html">Destination</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="fas fa-bars menu-btn">
-
-
-    
-        </i>
-
-    </nav>
-</div>
-</header>
-<main> 
-    <div class="slide-container swiper">
-        <div class="slide-content swiper-wrapper">
-            <div class="overLay swiper-slide">
-                <img src="img/travel3.jpg" alt="travel3">
-                <div class="img-overLay">
-                    <p>Let's Travel The World With Us</p>
-                    <h2><Span>Discover </Span> The World</h2>
-                    <h2>With Our Guide</h2>
+<body>
+    <!--header start-->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="img/logowhite.png" alt="Logo">
                 </div>
-            </div>
-
-            <div class="overLay swiper-slide">
-                <img src="img/travel2.jpg" alt="travel4">
-                <div class="img-overLay">
-                    <p>Let's Travel The World With Us</p>
-                    <h2><Span>Discover </Span> The World</h2>
-                    <h2>With Our Guide</h2>
-                </div>
-            </div>
-            <div class="overLay swiper-slide">
-                <img src="img/travel4.jpg" alt="travel4">
-                <div class="img-overLay">
-                    <p>Let's Travel The World With Us</p>
-                    <h2>Discover The World</h2>
-                    <h2>With Our <span>TravelSource</span> </h2>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-<!--search location-->
-
-<section id="location-search">
-    <div class="container">
-        <div class="form-wrapper">
-            <form action="#">
-                <input type="text" placeholder="Where to" class="form-control">
-                <select class="form-control">
-                    <option value="Destination"> Destination</option>
-                    <option value="Greece"> Greece</option>
-                    <option value="Italy"> Italy</option>
-                    <option value="Maldives"> Maldives</option>
-                    <option value="France"> France</option>
-
-                </select>
-                <select class="form-control">
-                    <option value="duration"> Duration</option>
-                    <option value="day-1">1 Day Tour</option>
-                    <option value="2-4 Days"> 2-4 Days Tour</option>
-                    <option value="5-7 Days">5-7 Days Tour</option>
-                    <option value="7+ Days"> 7+ Days</option>
-
-                </select>
-                <button type="button" class="primary-btn">Search Now</button>
-
-            </form>
-        </div>
-
-
-
-
-
-    </div>
-</section>
-
-
-
-<!--About page-->
-<section id="about">
-
-<div class="container">
-    <div class="about-content-wrapper">
-        <div class="agency-left-side">
-            <p class="heading-normal-txt">THE BEST TRAVEL AGENCY</p>
-            <h2 class="headings">
-                DISCOVER THE <span>WORLD</span> WITH OUR GUIDE
-            </h2>
-            <p class="lead">
-                At Travel Source, we believe that every journey should be an experience of a lifetime. Whether you're looking for a relaxing beach escape, an adventurous trek through the mountains, or a cultural deep dive into historic cities, we are here to make it happen. With expert guides, personalized itineraries, and exclusive deals, we turn your travel dreams into reality.
-            
-            </p>
-        <br>
-            <p class="lead">
-                Unforgettable adventures, breathtaking destinations, and tailor-made experiences—start your journey today!
-            </p> 
-            <ul>
-                <li>
-                    <div class="icons">
-                        <i class="fa fa-check"></i>
-                        <p> 10 Years Of Experience </p>
+                <ul>
+                    <div class="btn">
+                        <i class="fas fa-times close-btn"></i>
                     </div>
-                </li>
-                <li>
-                    <div class="icons">
-                        <i class="fa fa-check"></i>
-                        <p> 150 Tour Destination </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="icons">
-                        <i class="fa fa-phone-volume"></i>
-                        <p> 044 566 3333 </p>
-                    </div>
-                </li>
-            </ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="destination.html">Destination</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="fas fa-bars menu-btn"></i>
+            </nav>
         </div>
-        <div class="agency-right-side">
-            <div class="img">
-                <img src="img/vacation4.jpg" alt="">
+    </header>
+
+    <!-- Tours Section with Background Image -->
+    <section id="tours" class="tours-section">
+        <div class="container">
+            <div class="tours-content">
+                <h1>Our Tours</h1>
             </div>
         </div>
-    </div>
-</div>
-</section>
+    </section>
 
 <!-- ========== Choose your Place ========== -->
 <section id="choose-place">
@@ -681,218 +562,14 @@
     </div>
 </section>
 
- <!-- travel blog -->
- <section id="travel-blog">
-    <div class="container">
-        <p class="heading-normal-txt">TRAVEL BLOG</p>
-        <h2 class="headings">TRAVEL <span>EXPERIENCE</span></h2>
-        <div class="top-destination-wrapper swiper2">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 - Maldives -->
-                <div class="swiper-slide blog">
-                    <img src="./img/maldives3.jpg" alt="Maldives Destination" />
-                    <div class="blog-img-overlay">
-                        <div class="blog-img-content">
-                            <h2>Island Paradise</h2>
-                            <p class="lead">Luxury Beach Getaway With Private Villa Experience</p>
-                        </div>
-                    </div>
-                    <div class="price-label">
-                        <p>05 Dec</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 2 - Paris -->
-                <div class="swiper-slide blog">
-                    <img src="./img/paris1.jpg" alt="Paris Destination" />
-                    <div class="blog-img-overlay">
-                        <div class="blog-img-content">
-                            <h2>European Charm</h2>
-                            <p class="lead">Romantic Weekend in the City of Lights</p>
-                        </div>
-                    </div>
-                    <div class="price-label">
-                        <p>15 Dec</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 3 - Tokyo -->
-                <div class="swiper-slide blog">
-                    <img src="./img/tokyo1.jpg" alt="Tokyo Destination" />
-                    <div class="blog-img-overlay">
-                        <div class="blog-img-content">
-                            <h2>Urban Adventure</h2>
-                            <p class="lead">Exploring Tokyo's Hidden Food Scene and Night Markets</p>
-                        </div>
-                    </div>
-                    <div class="price-label">
-                        <p>27 Dec</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 4 - Safari -->
-                <div class="swiper-slide blog">
-                    <img src="./img/tanzania1.webp" alt="Safari Adventure" />
-                    <div class="blog-img-overlay">
-                        <div class="blog-img-content">
-                            <h2>Wildlife Expedition</h2>
-                            <p class="lead">Luxury Safari Camp With Guided Tours in Tanzania</p>
-                        </div>
-                    </div>
-                    <div class="price-label">
-                        <p>19 Dec</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 5 - Bali -->
-                <div class="swiper-slide blog">
-                    <img src="./img/bali.jpg" alt="Bali Destination" />
-                    <div class="blog-img-overlay">
-                        <div class="blog-img-content">
-                            <h2>Cultural Immersion</h2>
-                            <p class="lead">Temple Tours and Rice Terrace Trekking in Ubud</p>
-                        </div>
-                    </div>
-                    <div class="price-label">
-                        <p>23 Dec</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 6 - New York -->
-                <div class="swiper-slide blog">
-                    <img src="./img/newyork.jpg" alt="New York Destination" />
-                    <div class="blog-img-overlay">
-                        <div class="blog-img-content">
-                            <h2>City Getaway</h2>
-                            <p class="lead">Broadway Shows and Rooftop Dining in Manhattan</p>
-                        </div>
-                    </div>
-                    <div class="price-label">
-                        <p>01 Jan</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 7 - Santorini -->
-                <div class="swiper-slide blog">
-                    <img src="./img/santorini2.jpg" alt="Santorini Destination" />
-                    <div class="blog-img-overlay">
-                        <div class="blog-img-content">
-                            <h2>Mediterranean Beauty</h2>
-                            <p class="lead">Sunset Cruises and Cliff-Side Dining Experience</p>
-                        </div>
-                    </div>
-                    <div class="price-label">
-                        <p>10 Jan</p>
-                    </div>
-                </div>
-                
-                <!-- Slide 8 - Amazon -->
-                <div class="swiper-slide blog">
-                    <img src="./img/amazon.jpg" alt="Amazon Rainforest" />
-                    <div class="blog-img-overlay">
-                        <div class="blog-img-content">
-                            <h2>Eco Adventure</h2>
-                            <p class="lead">Rainforest Exploration With Local Naturalist Guides</p>
-                        </div>
-                    </div>
-                    <div class="price-label">
-                        <p>18 Jan</p>
-                    </div>
-                </div>
-            </div>
-            
-           
-        </div>
-    </div>
-</section>
-
-
-<!-- ========== TESTIMONIALS ========== Start -->
-<section id="testimonials">
-    <div class="container">
-        <p class="heading-normal-txt">TRAVEL BLOG</p>
-        <h2 class="headings">TRAVEL <span>EXPERIENCE</span></h2>
-        <div class="testimonials-wrapper swiper4">
-            <div class="swiper-wrapper">
-                <!-- Testimonial 1 -->
-                <div class="swiper-slide">
-                    <div class="testimonials-content">
-                        <p class="lead">
-                            <i class="fa-solid fa-quote-left"></i>
-                            "This was one of the best travel experiences I've ever had! The views were breathtaking, and the hospitality was top-notch. Highly recommended!"
-                            <i class="fa-solid fa-quote-right"></i>
-                        </p>
-                        <div class="test-img">
-                            <img src="./img/pfp.jpg" alt="John Doe">
-                        </div>
-                        <div class="icons">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p>John Doe</p>
-                        <p class="guest">Guest Review</p>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="swiper-slide">
-                    <div class="testimonials-content">
-                        <p class="lead">
-                            <i class="fa-solid fa-quote-left"></i>
-                            "Absolutely loved this trip! The guides were knowledgeable, and every destination was well-planned. Can't wait for my next adventure with them!"
-                            <i class="fa-solid fa-quote-right"></i>
-                        </p>
-                        <div class="test-img">
-                            <img src="./img/pfp.jpg" alt="Sophia Williams">
-                        </div>
-                        <div class="icons">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p>Sophia Williams</p>
-                        <p class="guest">Guest Review</p>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="swiper-slide">
-                    <div class="testimonials-content">
-                        <p class="lead">
-                            <i class="fa-solid fa-quote-left"></i>
-                            "An unforgettable journey! The accommodations were luxurious, and every moment was filled with joy. I highly recommend it to all travel enthusiasts."
-                            <i class="fa-solid fa-quote-right"></i>
-                        </p>
-                        <div class="test-img">
-                            <img src="./img/pfp.jpg" alt="Michael Johnson">
-                        </div>
-                        <div class="icons">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p>Michael Johnson</p>
-                        <p class="guest">Guest Review</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper4-button-next"></div>
-            <div class="swiper4-button-prev"></div>
-        </div>
-    </div>
-</section>
-<!-- ========== TESTIMONIALS ========== End -->
 
 
 
-<!-- ========= Footer ============ Start-->
+
+
+
+
+    <!-- ========= Footer ============ Start-->
 <footer id="footer">
     <div class="container">
         <div class="footer-content">
@@ -973,14 +650,10 @@
 </footer>
 <!-- ========= Footer ============ Close-->
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="swiper.js"></script>
+</body>
 
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
-<script src="swiper.js"></script>
-    </body>
 </html>

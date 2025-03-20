@@ -4,7 +4,7 @@
     --primary-color: #2095ae;
     --white-color: #fff;
     --light-gray-color: #ddd;
-    --blue-color: #0077cc;
+    --blue-color: #1a384f;
 }
 
 * {
@@ -647,22 +647,22 @@ transform: scale(1.03);
 
 
 /* ===================== Travel Countries ============== Start */
-#travel-countries, .france-content {
+#travel-countries {
     padding: 6rem 0;
 }
 
-.travel-countries-wrapper, .france-content {
+.travel-countries-wrapper {
     display: grid;
     grid-template-columns: 2fr 3fr;
     width: 100%;
     grid-gap: 2rem;
 }
 
-.countries-content, .france-content {
+.countries-content {
     margin-top: 2rem;
 }
 
-.countries-content ul, .france-content ul {
+.countries-content ul {
     list-style: none;
     display: flex;
     align-items: center;
@@ -670,7 +670,7 @@ transform: scale(1.03);
     margin: 1rem 0;
 }
 
-.countries-content ul li, .france-content ul li {
+.countries-content ul li {
     margin: 1.5rem 0.5rem;
 }
 
@@ -679,7 +679,7 @@ transform: scale(1.03);
 }
 
 /* Swiper Slide Styling */
-.travel-countries-wrapper .swiper-slide, .france-content .swiper-slide {
+.travel-countries-wrapper .swiper-slide {
     position: relative;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
@@ -689,7 +689,7 @@ transform: scale(1.03);
 }
 
 /* Overlay Effect on Hover */
-.travel-countries-wrapper .swiper-slide:hover::before, .france-content .swiper-slide:hover::before {
+.travel-countries-wrapper .swiper-slide:hover::before {
     content: "";
     position: absolute;
     top: 0;
@@ -702,7 +702,7 @@ transform: scale(1.03);
 }
 
 /* Image Styling */
-.travel-countries-wrapper .swiper-slide img, .france-content .swiper-slide img {
+.travel-countries-wrapper .swiper-slide img {
     width: 100%;
     height: 100%; /* Match slide height */
     object-fit: cover;
@@ -712,12 +712,12 @@ transform: scale(1.03);
 }
 
 /* Zoom Effect on Hover */
-.travel-countries-wrapper .swiper-slide:hover img, .france-content .swiper-slide:hover img {
+.travel-countries-wrapper .swiper-slide:hover img {
     transform: scale(1.1);
 }
 
 /* Overlay Content Styling */
-.travel-countries-wrapper .carousel-img-overlay, .france-content .carousel-img-overlay {
+.travel-countries-wrapper .carousel-img-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -729,37 +729,493 @@ transform: scale(1.03);
 }
 
 /* Hidden Content Animation */
-.travel-countries-wrapper .hidden-content-carousel, .france-content .hidden-content-carousel {
+.travel-countries-wrapper .hidden-content-carousel {
     opacity: 0;
     transform: translateY(100%);
     transition: all 0.5s ease-in-out;
 }
 
 /* Reveal Hidden Content on Hover */
-.travel-countries-wrapper .swiper-slide:hover .hidden-content-carousel, .france-content .swiper-slide:hover .hidden-content-carousel {
+.travel-countries-wrapper .swiper-slide:hover .hidden-content-carousel {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Location and Title Styling on Hover */
-.travel-countries-wrapper .carousel-img-overlay h2, .france-content .carousel-img-overlay h2 {
+.travel-countries-wrapper .carousel-img-overlay h2 {
     color: white;
     margin-bottom: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
-.travel-countries-wrapper .swiper-slide:hover .carousel-img-overlay h2, .france-content .swiper-slide:hover .carousel-img-overlay h2 {
+.travel-countries-wrapper .swiper-slide:hover .carousel-img-overlay h2 {
     transform: translateY(-10px);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .travel-countries-wrapper, .france-content {
+    .travel-countries-wrapper {
         grid-template-columns: 1fr;
     }
     
-    .travel-countries-wrapper .swiper-slide, .france-content .swiper-slide {
+    .travel-countries-wrapper .swiper-slide {
         height: 350px;
     }
 }
+
+.france-content{
+    padding: 8rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    width: 100%;
+    grid-gap: 2rem;
+}
+
+/* France Section Styling */
+.france-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    width: 100%;
+    grid-gap: 2rem;
+    padding: 6rem 0;
+}
+
+/* This ensures both Italy and France sections use the same hover effects */
+.france-content .carousel.swiper-slide {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+}
+
+.france-content .carousel.swiper-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+    border-radius: 10px;
+    transition: background 0.5s ease-in-out;
+}
+
+.france-content .carousel.swiper-slide:hover::before {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.france-content .carousel.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.france-content .carousel.swiper-slide:hover img {
+    transform: scale(1.1);
+}
+
+.france-content .carousel-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.france-content .hidden-content-carousel {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.france-content .carousel.swiper-slide:hover .hidden-content-carousel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.france-content .carousel-img-overlay h2 {
+    color: white;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.france-content .carousel.swiper-slide:hover .carousel-img-overlay h2 {
+    transform: translateY(-10px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .france-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .france-content .carousel.swiper-slide {
+        height: 350px;
+    }
+}
+
 /* ===================== Travel Countries ============== Close */
+
+
+/* ===================== Travel Blog ==============  */
+#travel-blog{
+    background: var(--blue-color);
+    padding: 6rem 0;
+
+}
+.blog h2{
+    color: var(--light-gray-color);
+}
+.blog{
+    position: relative;
+}
+.blog:hover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.blog img {
+    width: 100%;
+    height: 560px; /* Increased height for longer images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    object-position: center; /* Centers the image focus */
+}
+
+.blog-img-overlay{
+    width: 100%;
+}
+.blog-img-content{
+    position: absolute;
+    bottom: 20px;
+}
+.blog-img-content{
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 2rem 1rem;
+    transition: all 0.4s ease-in;
+    transform: translateY(-50%);
+    color: var(--white-color);
+
+}
+.blog:hover .blog-img-content{
+    transform: translateY(0%);
+}
+.blog .price-label{
+    transform: rotate(0deg);
+}
+
+
+
+/* ========== Testimonials ========== Start */
+#testimonials {
+    padding: 6rem 0;
+    width: 100%;
+    background: url("img/vacation5.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Adding a dark blue overlay */
+#testimonials::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 40, 114, 0.4); 
+    z-index: 1;
+}
+
+/* Ensure content appears on top of the overlay */
+#testimonials .headings,
+#testimonials .testimonials-wrapper,
+#testimonials .heading-normal-txt
+ {
+    position: relative;
+    z-index: 2;
+}
+
+#testimonials .headings {
+    color: rgb(4, 20, 35);
+}
+#testimonials .heading-normal-txt{
+    color: var(--white-color);
+}
+
+#testimonials .headings span{
+    color: white;
+}
+
+
+.testimonials-wrapper {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--white-color);
+    padding: 6rem 3rem;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.testimonials-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Moving the profile picture above the text */
+.testimonials-content .test-img {
+    order: -1;
+    margin-bottom: 1.5rem;
+}
+
+.test-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.test-img img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+}
+
+.testimonials-content p.lead {
+    text-align: center;
+    margin: 0 auto 1rem;
+    max-width: 90%;
+    font-size: 1.4rem;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.icons {
+    text-align: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.guest {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.swiper4 {
+    position: relative;
+}
+
+.swiper4 .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-width: 100%;
+    word-break: break-word;
+    flex: 0 0 100%; /* Ensures each slide takes exactly one full width */
+}
+
+.swiper4-button-next, .swiper4-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(21, 40, 114, 10);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.swiper4-button-next {
+    right: 10px;
+}
+
+.swiper4-button-prev {
+    left: 10px;
+}
+
+/* ========================= Footer  ============ Start*/
+#footer {
+    padding: 3rem 0;
+    background: var(--blue-color);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+    margin-bottom: 3rem; /* Added space after contact section */
+}
+
+.ft-content {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem; /* Increased padding */
+    color: var(--white-color);
+}
+
+.icon i {
+    padding: 1rem;
+    font-size: 2.5rem;
+    background: var(--primary-color);
+}
+
+.content {
+    padding: 1rem;
+}
+
+.content p.lead {
+    font-size: 1.1rem; /* Increased text size */
+    margin-bottom: 0.5rem;
+}
+
+.content p {
+    font-size: 1rem; /* Increased text size */
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem 0;
+    grid-gap: 3rem; /* Increased gap between sections */
+    color: var(--white-color);
+    margin: 4rem 0;
+}
+
+.about img {
+    width: 40%; /* Reduced image size from 50% to 40% */
+    object-fit: cover;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Contains the icons in a smaller area */
+}
+
+.social-icons i {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    margin: 1.5rem 0; /* Increased vertical margin */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Fix for weird spacing in text */
+.about .lead {
+    font-size: 1.05rem;
+    margin-top: 1.5rem;
+    line-height: 1.6;
+    word-spacing: normal; /* Control word spacing */
+    text-align: left; /* Ensure left alignment */
+    letter-spacing: normal; /* Normal letter spacing */
+    font-kerning: normal; /* Normal kerning */
+}
+
+.links h2, .subscribe h2 {
+    margin-bottom: 1.5rem; /* More space after headings */
+    font-size: 1.4rem; /* Larger heading size */
+}
+
+.links ul {
+    list-style-type: none;
+}
+
+.links ul li {
+    margin: 1.2rem; /* Increased spacing between list items */
+    font-size: 1.1rem; /* Increased text size */
+}
+
+.links ul li a {
+    color: var(--white-color);
+    transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+    color: var(--primary-color); /* Added hover effect */
+}
+
+/* Fix for weird spacing in text */
+.subscribe .lead {
+    font-size: 1.1rem;
+    letter-spacing: normal; /* Changed from 1px to normal */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    word-spacing: normal; /* Control word spacing */
+    text-align: left; /* Ensure left alignment */
+}
+
+form {
+    position: relative;
+}
+
+.subscribe input {
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--light-gray-color);
+    padding: 0.8rem 1rem; /* Larger input field */
+    border-radius: 5px;
+    margin-top: 1.5rem; /* More space before input */
+    font-size: 1rem; /* Larger text in input field */
+}
+
+.subscribe button {
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: 4%;
+    padding: 0.5rem 1.5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.footer {
+    border-top: 1px solid var(--light-gray-color);
+}
+
+.footer p {
+    text-align: center;
+    padding: 1.2rem 0; /* Increased padding */
+    color: var(--white-color);
+    font-size: 1rem; /* Increased text size */
+}
+/* ========================= Footer ============ Close*/

@@ -72,7 +72,7 @@ html {
         right: 0;
         transform: translateX(100%);
         padding: 1rem 2rem 2rem;
-        transition: transform 0.5s ease-in-out;
+        /* transition: transform 0.5s ease-in-out; */
         z-index: 1000;
     }
 
@@ -331,5 +331,378 @@ html {
 
     .video-content span {
         font-size: 0.9rem;
+    }
+}
+
+
+/* Media Queries for Travel Blog Section */
+@media screen and (max-width: 1200px) {
+    .blog img {
+        height: 500px;
+    }
+    
+    .blog-img-content {
+        padding: 1.8rem 1rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #travel-blog {
+        padding: 5rem 0;
+    }
+    
+    .blog img {
+        height: 450px;
+    }
+    
+    .blog-img-content {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #travel-blog {
+        padding: 4rem 0;
+    }
+    
+    .blog img {
+        height: 400px;
+    }
+    
+    .blog-img-content {
+        padding: 1.3rem 0.8rem;
+        transform: translateY(-40%);
+    }
+    
+    .blog:hover .blog-img-content {
+        transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #travel-blog {
+        padding: 3rem 0;
+    }
+    
+    .blog img {
+        height: 350px;
+    }
+    
+    .blog-img-content {
+        padding: 1rem 0.7rem;
+        transform: translateY(-30%);
+    }
+    
+    .blog-img-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .blog-img-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .blog img {
+        height: 300px;
+    }
+    
+    .blog-img-content {
+        padding: 0.8rem 0.5rem;
+        transform: translateY(-20%);
+    }
+    
+    .blog-img-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .blog-img-content p {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+
+/* Media Queries for Testimonials Section */
+@media screen and (max-width: 1024px) {
+    .testimonials-wrapper {
+        padding: 4rem 2rem;
+    }
+    
+    .testimonials-content p.lead {
+        font-size: 1.2rem;
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #testimonials {
+        padding: 4rem 0;
+    }
+    
+    .testimonials-wrapper {
+        padding: 3rem 1.5rem;
+    }
+    
+    .test-img img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .testimonials-content p.lead {
+        font-size: 1.1rem;
+    }
+    
+    .swiper4-button-next, .swiper4-button-prev {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #testimonials {
+        padding: 3rem 0;
+    }
+    
+    .testimonials-wrapper {
+        padding: 2rem 1rem;
+        border-radius: 8px;
+    }
+    
+    .test-img img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .testimonials-content p.lead {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    
+    .guest {
+        font-size: 0.75rem;
+    }
+    
+    .swiper4-button-next, .swiper4-button-prev {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .swiper4-button-next {
+        right: 5px;
+    }
+    
+    .swiper4-button-prev {
+        left: 5px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .testimonials-wrapper {
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .test-img img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .testimonials-content p.lead {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Media Queries for Footer Section */
+@media screen and (max-width: 1200px) {
+    .footer-wrapper {
+        grid-gap: 2rem;
+    }
+    
+    .about img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ft-content:last-child {
+        grid-column: span 2;
+    }
+    
+    .footer-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about {
+        grid-column: span 2;
+        margin-bottom: 2rem;
+    }
+    
+    .about img {
+        width: 30%;
+    }
+    
+    .social-icons {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #footer {
+        padding: 2rem 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .ft-content {
+        padding: 0.5rem;
+    }
+    
+    .ft-content:last-child {
+        grid-column: auto;
+    }
+    
+    .icon i {
+        font-size: 2rem;
+        padding: 0.8rem;
+    }
+    
+    .content p.lead {
+        font-size: 1rem;
+    }
+    
+    .content p {
+        font-size: 0.9rem;
+    }
+    
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+        margin: 2rem 0;
+    }
+    
+    .about {
+        grid-column: auto;
+    }
+    
+    .about img {
+        width: 40%;
+    }
+    
+    .about .lead {
+        font-size: 1rem;
+    }
+    
+    .links h2, .subscribe h2 {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+    
+    .links ul li {
+        margin: 1rem;
+    }
+    
+    .subscribe .lead {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer-content {
+        border: none;
+        gap: 1rem;
+    }
+    
+    .ft-content {
+        border: 1px solid var(--light-gray-color);
+        padding: 0.3rem;
+    }
+    
+    .icon i {
+        font-size: 1.8rem;
+        padding: 0.7rem;
+    }
+    
+    .content {
+        padding: 0.7rem;
+    }
+    
+    .about img {
+        width: 50%;
+    }
+    
+    .social-icons {
+        width: 80%;
+    }
+    
+    .social-icons i {
+        padding: 0.4rem;
+        font-size: 1.1rem;
+        margin: 1rem 0;
+    }
+    
+    .links ul li {
+        margin: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .subscribe button {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #footer {
+        padding: 1.5rem 0;
+    }
+    
+    .icon i {
+        font-size: 1.5rem;
+        padding: 0.6rem;
+    }
+    
+    .content p.lead {
+        font-size: 0.9rem;
+    }
+    
+    .content p {
+        font-size: 0.8rem;
+    }
+    
+    .about img {
+        width: 60%;
+    }
+    
+    .about .lead {
+        font-size: 0.9rem;
+    }
+    
+    .links h2, .subscribe h2 {
+        font-size: 1.2rem;
+    }
+    
+    .links ul li {
+        margin: 0.7rem;
+        font-size: 0.9rem;
+    }
+    
+    .subscribe .lead {
+        font-size: 0.9rem;
+    }
+    
+    .subscribe input {
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .subscribe button {
+        padding: 0.3rem 1rem;
+        font-size: 0.8rem;
     }
 }
